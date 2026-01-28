@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HangMan Game</title>
+    <link rel="stylesheet" href="./style.css" />
+         <script src="./Data.js"></script>
+
+  </head>
+  <body>
+
+    <div class="modal">
+        <div class="content">
+            <img src="./assets/Sad.gif" alt="gif">
+            <h4>Why did you kill me !?</h4>
+            <p>The correct word was : <b></b></p>
+            <button class="again">Play again </button>
+        </div>
+    </div>
+    <div class="container">
+      <div class="nav">
+        <h1>Hangman Game</h1>
+      </div>
+      <div class="box">
+        <div class="leftBox">
+          <img src="./assets/hangman-0.svg" alt="hangman" />
+        </div>
+
+        <div class="rightBox">
+          <ul class="word">
+          </ul>
+          <h5 class="hint">Hint : <b></b></h5>
+
+          <div class="wrongBox">
+            <p class="wrong"> Wrong Letters</p>
+            <p class="input"></p>
+        </div>
+        <p class="remain">remain : <span class="remainNum">5</span></p>
+          <div class="keyboard">
+          </div>
+
+          <button class="change">Change word</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- JavaScript -->
+     <script src="./js.js"></script>
+  </body>
+</html>

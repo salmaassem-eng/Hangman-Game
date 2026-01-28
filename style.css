@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fcf6d9;
+  min-height: 100vh;
+  padding: 0 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  width: 1050px;
+  padding: 70px;
+  border-radius: 15px;
+  background-color: #9cc6db;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav .score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ************************************** */
+
+.box {
+  display: flex;
+  flex-direction: row;
+  gap: 12rem;
+  justify-content: center;
+}
+
+.rightBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.rightBox ul .letter {
+  width: 30px;
+  border-bottom: 2px solid #000;
+  font-size: 2rem;
+  font-weight: 600px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.rightBox .letter.writed {
+  border-color: transparent;
+  margin: -20px 0 0;
+}
+
+.rightBox ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.hint {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* ******************************************** */
+
+.wrongBox {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrongBox .input {
+  width: 200px;
+  border: 1px solid #000;
+  padding: 5px;
+  font-size: 1rem;
+  color: #cf4b00;
+  text-transform: uppercase;
+}
+
+/* ***************************************8 */
+.remain {
+  text-align: center;
+  opacity: 0.8;
+  color: #cf4b00;
+}
+
+/* ***************************************** */
+
+.rightBox .keyboard {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.keyboard button {
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #fcf6d9;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px;
+  text-transform: uppercase;
+  width: calc(100% / 9 - 5px);
+}
+
+.keyboard button:hover {
+  background-color: #9cc6db;
+}
+
+.keyboard button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.rightBox .change {
+  position: absolute;
+  right: -30px;
+  bottom: -50px;
+  padding: 12px 18px;
+  border: none;
+  background-color: #cf4b00;
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  
+}
+
+.rightBox .change:hover{
+  background-color: #cf4b00;
+  opacity: 0.8;
+}
+
+/* *********************** */
+.modal {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal .content {
+  background-color: #fcf6d9;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.modal img {
+  background-color: transparent;
+  max-width: 180px;
+  margin-bottom: 20px;
+}
+
+.modal h4 {
+  font-size: 1.5rem;
+}
+
+.modal p {
+  font-size: 0.9rem;
+  margin: 15px 0 30px;
+  font-weight: 500;
+}
+
+.modal p span {
+  color: #cf4b00;
+  font-weight: 600;
+}
+
+.modal button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #9cc6db;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal button:hover{
+opacity: 0.7;
+}
+
+@media (max-width: 780px) {
+  .box {
+    flex-direction: column;
+    padding: 30px 15px;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .leftBox img {
+    max-width: 250px;
+  }
+  .rightBox .change {
+    bottom: -80px;
+  }
+}
