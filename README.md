@@ -33,7 +33,7 @@ Win by guessing the word before attempts run out
 
 ## 🌐 Live Demo
 🔗 **Play the game here:**  
-https://salmaassem-eng.github.io/Hangman-Game-/
+https://salmaassem-eng.github.io/Hangman-Game/
 
 
 
