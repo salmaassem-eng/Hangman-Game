@@ -21,7 +21,7 @@ Built with:
 ## 📁 Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/salmaassem-eng/Hangman-Game-.git
+   git clone https://github.com/salmaassem-eng/Hangman-Game.git
 Open index.html in your browser
 
 ▶️ How to Play
